@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pvt.by.pojos" auto-import="true">
+
+    <class name="Category" table="T_CATEGORY">
+        <id name="categoryId">
+            <generator class="increment"/>
+        </id>
+
+        <property name="categoryName" column="F_CATEGORY_NAME" type="string"/>
+
+        <set name="news" table="T_NEWS" inverse="true" fetch="select" cascade="save-update">
+            <key column="F_CATEGORY_ID" not-null="true"></key>
+            <one-to-many class="News"></one-to-many>
+        </set>
+    </class>
+
+</hibernate-mapping>

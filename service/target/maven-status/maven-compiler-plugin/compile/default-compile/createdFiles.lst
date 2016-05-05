@@ -1,0 +1,16 @@
+pvt\by\dto\NewsDTO.class
+pvt\by\service\impl\TagServiceImpl.class
+pvt\by\service\interfaces\Service.class
+pvt\by\service\interfaces\UserService.class
+pvt\by\service\impl\NewsServiceImpl.class
+pvt\by\service\interfaces\TagService.class
+pvt\by\service\interfaces\RoleService.class
+pvt\by\MainClassService.class
+pvt\by\service\impl\UserServiceImpl.class
+pvt\by\util\ServiceUtil.class
+pvt\by\service\impl\CommentServiceImpl.class
+pvt\by\service\interfaces\NewsService.class
+pvt\by\dto\CommentDTO.class
+pvt\by\service\interfaces\CategoryService.class
+pvt\by\service\interfaces\CommentService.class
+pvt\by\service\impl\CategoryServiceImpl.class

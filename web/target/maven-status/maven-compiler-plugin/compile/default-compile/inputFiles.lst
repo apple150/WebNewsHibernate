@@ -1,0 +1,16 @@
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\filters\CharsetFilter.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\LogoutCommand.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\ShowEditCommentPageCommand.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\DeleteCommentCommand.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\controller\Controller.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\DeleteNewsCommand.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\ShowEditNewsPageCommand.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\ShowNewsPageCommand.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\SaveCommentCommand.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\util\CommandHandler.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\util\RequestHandler.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\util\WebConstants.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\SaveNewsCommand.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\filters\AuthenticationFilter.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\Command.java
+D:\JavaEE\Projects\WebNewsHibernate\web\src\main\java\pvt\by\command\ShowSingleNewsPageCommand.java

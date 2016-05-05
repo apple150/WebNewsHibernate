@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pvt.by.pojos" auto-import="true">
+
+    <class name="User" table="T_USER">
+        <id name="userId">
+            <generator class="increment"/>
+        </id>
+
+        <property name="name" column="F_NAME" type="string"/>
+        <property name="surName" column="F_SUR_NAME" type="string"/>
+        <property name="email" column="F_EMAIL" type="string"/>
+        <property name="password" column="F_PASSWORD" type="string"/>
+
+        <many-to-one name="role" class="Role" fetch="select" column="F_ROLE_ID" cascade="save-update"></many-to-one>
+
+        <set name="news" table="T_NEWS" inverse="true" lazy="true" fetch="select" cascade="all-delete-orphan">
+            <key column="F_USER_ID" not-null="true"></key>
+            <one-to-many class="News"></one-to-many>
+        </set>
+
+        <set name="comment" table="T_COMMENT" inverse="true" lazy="true" fetch="select" cascade="all-delete-orphan">
+            <key column="F_USER_ID" not-null="true"></key>
+            <one-to-many class="Comment"></one-to-many>
+        </set>
+    </class>
+
+</hibernate-mapping>

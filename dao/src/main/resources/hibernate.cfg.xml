@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernews</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.pool_size">10</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+
+        <!--<Cashe configuration/>-->
+        <!--<property name="hibernate.cache.use_second_level_cache">true</property>-->
+        <!--<property name="hibernate.cache.use_query_cache">true</property>-->
+        <!--<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>-->
+
+        <!--<Mapping *.hbm.xml/>-->
+        <!--<mapping resource="Category.hbm.xml"/>-->
+        <!--<mapping resource="Comment.hbm.xml"/>-->
+        <!--<mapping resource="News.hbm.xml"/>-->
+        <!--<mapping resource="NewsDetail.hbm.xml"/>-->
+        <!--<mapping resource="Role.hbm.xml"/>-->
+        <!--<mapping resource="Tag.hbm.xml"/>-->
+        <!--<mapping resource="User.hbm.xml"/>-->
+        <!--<mapping class="pvt.by.pojos.User"/>-->
+
+        <!--<Mapping Annotation *.java/>-->
+        <mapping class="pvt.by.pojos.Tag"/>
+        <mapping class="pvt.by.pojos.Role"/>
+        <mapping class="pvt.by.pojos.NewsDetail"/>
+        <mapping class="pvt.by.pojos.Category"/>
+        <mapping class="pvt.by.pojos.User"/>
+        <mapping class="pvt.by.pojos.Comment"/>
+        <mapping class="pvt.by.pojos.News"/>
+    </session-factory>
+</hibernate-configuration>

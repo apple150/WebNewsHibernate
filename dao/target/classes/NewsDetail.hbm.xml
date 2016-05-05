@@ -1,0 +1,20 @@
+    <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pvt.by.pojos" auto-import="true">
+
+    <class name="NewsDetail" lazy="false" table="T_NEWS_DETAIL">
+        <id name="newsId">
+            <generator class="foreign">
+                <param name="property">news</param>
+            </generator>
+        </id>
+
+        <one-to-one name="news" class="News" constrained="true" cascade="all" lazy="false"></one-to-one>
+
+        <property name="author" column="F_AUTHOR" type="string"/>
+        <property name="agency" column="F_AGENCY" type="string"/>
+        <property name="drelease" column="F_DRELEASE" type="date"/>
+    </class>
+
+</hibernate-mapping>

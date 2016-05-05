@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pvt.by.pojos" auto-import="true">
+
+    <class name="News" table="T_NEWS">
+        <id name="newsId">
+            <generator class="increment"/>
+        </id>
+
+        <property name="title" column="F_TITLE" type="string"/>
+        <property name="annotation" column="F_ANNOTATION" type="string"/>
+        <property name="document" column="F_DOCUMENT" type="string"/>
+
+        <!--<one-to-one name="newsDetail" class="NewsDetail" cascade="all"></one-to-one>-->
+        <many-to-one name="category" class="Category" lazy="false" fetch="select" column="F_CATEGORY_ID" cascade="save-update"></many-to-one>
+        <many-to-one name="user" class="User" fetch="select" lazy="false" column="F_USER_ID" cascade="save-update"></many-to-one>
+        <set name="comment" table="T_COMMENT" inverse="true" lazy="false" fetch="select" cascade="all-delete-orphan">
+            <key column="F_NEWS_ID" not-null="true"></key>
+            <one-to-many class="Comment"></one-to-many>
+        </set>
+        <set name="tag" table="T_NEWS_TAG" inverse="false" lazy="false" fetch="select" cascade="save-update">
+            <key column="F_NEWS_ID"></key>
+            <many-to-many column="F_TAG_ID" class="Tag"></many-to-many>
+        </set>
+    </class>
+
+</hibernate-mapping>

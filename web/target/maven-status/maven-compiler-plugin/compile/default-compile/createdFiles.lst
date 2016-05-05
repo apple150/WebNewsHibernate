@@ -1,0 +1,16 @@
+pvt\by\filters\CharsetFilter.class
+pvt\by\command\ShowEditCommentPageCommand.class
+pvt\by\command\DeleteNewsCommand.class
+pvt\by\command\Command.class
+pvt\by\command\ShowEditNewsPageCommand.class
+pvt\by\command\SaveCommentCommand.class
+pvt\by\command\ShowSingleNewsPageCommand.class
+pvt\by\command\DeleteCommentCommand.class
+pvt\by\command\util\RequestHandler.class
+pvt\by\command\SaveNewsCommand.class
+pvt\by\filters\AuthenticationFilter.class
+pvt\by\command\util\CommandHandler.class
+pvt\by\controller\Controller.class
+pvt\by\command\ShowNewsPageCommand.class
+pvt\by\command\LogoutCommand.class
+pvt\by\command\util\WebConstants.class

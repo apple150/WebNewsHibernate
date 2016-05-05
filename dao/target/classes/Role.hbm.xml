@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pvt.by.pojos" auto-import="true">
+
+    <class name="Role" table="T_ROLE">
+        <id name="roleId">
+            <generator class="increment"/>
+        </id>
+
+        <property name="role" column="F_ROLE" type="integer"/>
+        <property name="nameRole" column="F_NAME_ROLE" type="string"/>
+
+        <set name="user" table="T_USER" inverse="true" lazy="true" fetch="select" cascade="all-delete-orphan">
+            <key column="F_ROLE_ID" not-null="true"></key>
+            <one-to-many class="User"></one-to-many>
+        </set>
+    </class>
+
+</hibernate-mapping>
